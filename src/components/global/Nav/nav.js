@@ -10,6 +10,9 @@ const NavStyles = styled.nav`
   width: 100%;
   position: fixed;
   z-index: 999;
+  .nav-background {
+    transition: all 0.25s ease-in-out;
+  }
   .nav-wrapper {
     padding: 1rem 0;
     display: flex;
@@ -17,9 +20,10 @@ const NavStyles = styled.nav`
     align-items: center;
 
     .logo {
+      transition: all 0.25s ease-in-out;
       svg {
         cursor: pointer;
-        transition: var(--transition);
+        transition: all 0.25s ease-in-out;
         width: 150px;
         fill: white;
         &:hover,
@@ -41,14 +45,14 @@ const Nav = () => {
     }
   }
   window.addEventListener('scroll', changeScroll)
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden'
-    }
-    if (!open) {
-      document.body.style.overflow = 'auto'
-    }
-  }, [open])
+  // useEffect(() => {
+  //   if (open) {
+  //     document.body.style.overflow = 'hidden'
+  //   }
+  //   if (!open) {
+  //     document.body.style.overflow = 'auto'
+  //   }
+  // }, [open])
 
   return (
     <NavStyles>
@@ -57,15 +61,22 @@ const Nav = () => {
           scroll ? 'nav-background nav-background-active' : 'nav-background'
         }
       >
-        <MaxWidth>
+        <MaxWidth maxWidth="1440">
           <section className="nav-wrapper">
             <div className="logo">
               <Link to="/">
                 <Logo />
               </Link>
             </div>
+            <div className="nav">
+        <ul>
+          <li>
+            
+          </li>
+        </ul>
             <div className="button">
               <StyledButton text="CONTACT" />
+            </div>
             </div>
           </section>
         </MaxWidth>

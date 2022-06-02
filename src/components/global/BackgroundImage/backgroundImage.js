@@ -34,9 +34,9 @@ const StyledBackground = styled.section`
       right: 0;
       top: 0;
       bottom: 0;
-      transform: scale(1.25);
+      transform: scale(1.56);
       g {
-        opacity: 0.25;
+        opacity: 0.15;
         /* opacity: 1; */
       }
     }

@@ -19,17 +19,12 @@ const Animations = css`
     transition: var(--transition);
   }
   .nav-background-active {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 1);
     .nav-wrapper {
-      padding: 0.5rem 0 !important;
+      /* padding: 0.5rem 0 !important; */
     }
     svg {
       width: 120px !important;
-    }
-    button {
-      a {
-        padding: 0.35rem 0.5rem !important;
-      }
     }
   }
 `

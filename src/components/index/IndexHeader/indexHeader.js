@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { BackgroundImage, MaxWidth, StyledButton } from 'components/global'
+import {
+  BackgroundImage,
+  MaxWidth,
+  Social,
+  StyledButton,
+} from 'components/global'
 import { media } from 'utils/Media'
 
 const IndexHeaderStyles = styled.header`
@@ -9,7 +14,7 @@ const IndexHeaderStyles = styled.header`
   height: 100vh;
   display: flex;
   align-items: center;
-
+  position: relative;
   .title {
     position: relative;
     z-index: 5;
@@ -17,11 +22,27 @@ const IndexHeaderStyles = styled.header`
     font-weight: 700;
     p {
       font-weight: 400;
-      font-size: 1.2rem;
       &:nth-child(1) {
+        font-size: 1.4rem;
         color: var(--main);
         font-weight: 700;
       }
+      a {
+        color: var(--main);
+        &:hover,
+        &:active {
+          color: var(--white);
+          span {
+            text-decoration: underline solid 1px;
+          }
+        }
+        span {
+          display: inline-block;
+        }
+      }
+    }
+    .intro {
+      max-width: 850px;
     }
     h1 {
       @media ${media.ls} {
@@ -48,18 +69,23 @@ const IndexHeader = () => {
     <IndexHeaderStyles>
       <MaxWidth>
         <div className="title">
-          <p>Hi, i'm Nick</p>
+          <p className="name">Hi, i'm Nick</p>
           <h1>
             I build <span>Websites</span> and other cool things for the web!
           </h1>
-          <p>
-            I’m a self-taught UI/UX designer and Front-end Developer based in
-            London, UK.
+          <p className="intro">
+            I’m a Front-end Developer &amp; UI/UX designer based in London, UK.
+            Currently, designing and building exceptional digital experiences
+            for the West End at{' '}
+            <a href="http://www.dewynters.com" target="_blank" rel="noreferrer">
+              <span>Dewynters.</span>
+            </a>
           </p>
           <StyledButton text="Get in touch" to="/privacy" />
         </div>
       </MaxWidth>
       <BackgroundImage />
+      <Social $desktop />
     </IndexHeaderStyles>
   )
 }
