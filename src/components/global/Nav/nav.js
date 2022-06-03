@@ -3,32 +3,63 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import Logo from 'svgs/logo-row.svg'
+import { media } from 'utils/Media'
+import { NavBlock } from 'components/Blocks/Nav'
+import { Hamburger } from '../Hamburger'
 import { MaxWidth } from '../MaxWidth'
+import { Menu } from '../Menu'
 import { StyledButton } from '../StyledButton'
 
 const NavStyles = styled.nav`
   width: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   .nav-background {
     transition: all 0.25s ease-in-out;
+    padding: 1.25rem 0;
   }
-  .nav-wrapper {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    .logo {
+  .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+      display: flex;
+      /* justify-content: flex-start; */
+      align-items: center;
       transition: all 0.25s ease-in-out;
-      svg {
-        cursor: pointer;
-        transition: all 0.25s ease-in-out;
-        width: 150px;
-        fill: white;
-        &:hover,
-        &:active {
-          fill: var(--main);
+
+      @media ${media.md} {
+        padding-left: 0;
+      }
+      a {
+        width: 100%;
+        padding-left: 1rem;
+        svg {
+          /* max-width: 120px; */
+          cursor: pointer;
+          transition: all 0.25s ease-in-out;
+          width: 140px;
+          fill: white;
+          &:hover,
+          &:active {
+            fill: var(--main);
+          }
+        }
+      }
+    }
+    &__links {
+      ul {
+        li {
+          display: none;
+        }
+        @media ${media.s} {
+          li {
+            &:nth-child(5) {
+              display: block;
+            }
+          }
         }
       }
     }
@@ -45,43 +76,42 @@ const Nav = () => {
     }
   }
   window.addEventListener('scroll', changeScroll)
-  // useEffect(() => {
-  //   if (open) {
-  //     document.body.style.overflow = 'hidden'
-  //   }
-  //   if (!open) {
-  //     document.body.style.overflow = 'auto'
-  //   }
-  // }, [open])
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    }
+    if (!open) {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
 
   return (
-    <NavStyles>
-      <div
-        className={
-          scroll ? 'nav-background nav-background-active' : 'nav-background'
-        }
-      >
-        <MaxWidth maxWidth="1440">
-          <section className="nav-wrapper">
-            <div className="logo">
-              <Link to="/">
-                <Logo />
-              </Link>
-            </div>
+    <>
+      <NavStyles>
+        <div
+          className={
+            scroll ? 'nav-background nav-background-active' : 'nav-background'
+          }
+        >
+          <MaxWidth maxWidth="1600">
             <div className="nav">
-        <ul>
-          <li>
-            
-          </li>
-        </ul>
-            <div className="button">
-              <StyledButton text="CONTACT" />
+              <section className="nav__logo">
+                <Hamburger open={open} setOpen={setOpen} />
+                <div className="logo">
+                  <Link to="/">
+                    <Logo />
+                  </Link>
+                </div>
+              </section>
+              <div className="nav__links">
+                <NavBlock $smallerBtn />
+              </div>
             </div>
-            </div>
-          </section>
-        </MaxWidth>
-      </div>
-    </NavStyles>
+          </MaxWidth>
+        </div>
+      </NavStyles>
+      <Menu open={open} setOpen={setOpen} />
+    </>
   )
 }
 

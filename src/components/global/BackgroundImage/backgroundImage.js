@@ -36,7 +36,7 @@ const StyledBackground = styled.section`
       bottom: 0;
       transform: scale(1.56);
       g {
-        opacity: 0.15;
+        opacity: 0.25;
         /* opacity: 1; */
       }
     }

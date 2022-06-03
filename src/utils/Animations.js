@@ -20,10 +20,9 @@ const Animations = css`
   }
   .nav-background-active {
     background: rgba(0, 0, 0, 1);
-    .nav-wrapper {
-      /* padding: 0.5rem 0 !important; */
-    }
+    padding: 0.5rem 0 !important;
     svg {
+      padding-top: 0.5rem;
       width: 120px !important;
     }
   }

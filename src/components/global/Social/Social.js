@@ -17,11 +17,13 @@ const SocialButtons = styled.aside`
       @media ${media.md} {
         display: flex;
       }
-      position: fixed;
+      position: absolute;
+      z-index: 999;
       bottom: 0;
       left: 0;
       flex-direction: column;
       ul {
+        list-style: none;
         display: flex;
         flex-direction: column;
         &:after {
@@ -48,6 +50,9 @@ const SocialButtons = styled.aside`
           }
         }
       }
+      @media ${media.lg} {
+        position: fixed;
+      }
     `}
   svg {
     width: 25px;
@@ -56,7 +61,7 @@ const SocialButtons = styled.aside`
 `
 const Social = props => (
   <SocialButtons {...props}>
-    <MaxWidth maxWidth="1440">
+    <MaxWidth maxWidth="1600">
       <ul>
         <li>
           <a href="https://www.linkedin.com/">

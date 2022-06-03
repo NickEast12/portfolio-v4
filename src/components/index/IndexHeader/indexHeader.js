@@ -45,8 +45,8 @@ const IndexHeaderStyles = styled.header`
       max-width: 850px;
     }
     h1 {
-      @media ${media.ls} {
-        font-size: ${props => props.theme.font.size.h3};
+      @media (max-width: 370px) {
+        font-size: 2.2rem;
       }
       margin: 0.5rem 0;
       /* line-height: 2rem; */

@@ -22,6 +22,14 @@ const StyledLink = styled(Link)`
     background: var(--white);
     border: solid 2px var(--white);
   }
+  ${props =>
+    props.$smallerBtn &&
+    css`
+      padding: 0.3rem 0.45rem;
+      span {
+        font-size: 0.85rem;
+      }
+    `}
 `
 const StyledOutboundLink = styled.a`
   cursor: pointer;

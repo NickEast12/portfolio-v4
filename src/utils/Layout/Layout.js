@@ -52,7 +52,7 @@ const Layout = ({ children, title, description }) => {
         <GlobalStyles />
         <Nav />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </>
     </ThemeProvider>
   )
