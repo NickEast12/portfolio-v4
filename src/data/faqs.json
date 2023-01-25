@@ -1,0 +1,55 @@
+
+
+[
+    {
+        "category": "EVENTS/VENUE",
+        "questions": [
+            {
+                "question": "What is Gotham: Arkham Rises?",
+                "answer": "<p>Gotham: Arkham Rises is a ground-breaking original immersive live &lsquo;theatrical&rsquo; experience, based on one of DC&rsquo;s most iconic characters: Batman. It is based on an original story created and written by Myriad Entertainment and produced by Dept Studios Inc.</p><p>Batman is missing. Arkham Asylum has been razed to the ground. On the former site, the luxury development: &ldquo;Arkham Rises&rdquo;, reaches up to the sky, casting a new shadow over the city.</p><p>Our audience members play the citizens of Gotham City, invited to attend a demonstration of the pioneering rehabilitation methods, but what feast of fools lies within? Anything can happen.</p><p>Set in a vast, multi-sensory world, Gotham: Arkham Rises is an epic, two-hour, free-roaming experience: combining interactive theatre, stunning design and futuristic tech to immerse you in a new and original story like never before.</p><p>Witness the story unfold or choose your own adventure, alongside 30 iconic characters including Scarecrow, Catwoman, Poison Ivy and many more.</p><p>Lose yourself in Gotham: Arkham Rises - a full evening's entertainment, including in-world bars, a post-show venue and exclusive Batman merchandise.</p><p>This uniquely suspenseful piece of theatre allows the audience to enter Arkham and fight for the future of Gotham City.</p><p><strong>This is an 18+ production. </strong></p>"
+            },
+            {
+                "question": "What does ‘immersive’ mean?",
+                "answer": "<p>This is an answer</p>"
+            },
+            {
+                "question": "Do I need to know the story?",
+                "answer": "<p>This is an answer</p>"
+            }
+        ]
+    },
+    {
+        "category": "YOUR VISIT",
+        "questions": [
+            {
+                "question": "Are you casting for actors?",
+                "answer": "<p>This is an answer</p>"
+            },
+            {
+                "question": "Can I sign up to your mailing list?",
+                "answer": "<p>This is an answer</p>"
+            },
+            {
+                "question": "Are you on social media?",
+                "answer": "<p>This is an answer</p>"
+            }
+        ]
+    },
+    {
+        "category": "GENERAL",
+        "questions": [
+            {
+                "question": "Are you casting for actors?",
+                "answer": "<p>This is an answer</p>"
+            },
+            {
+                "question": "Can I sign up to your mailing list?",
+                "answer": "<p>This is an answer</p>"
+            },
+            {
+                "question": "Are you on social media?",
+                "answer": "<p>This is an answer</p>"
+            }
+        ]
+    }
+]
