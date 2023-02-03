@@ -1,33 +1,22 @@
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { StaticImage } from 'gatsby-plugin-image'
 import { media } from 'utils/Media'
-
-
 
 const ButtonStyles = styled.button`
   width: 200px;
-  background: var(--black);
+  background: var(--main);
   border-radius: 0;
-  border: solid 2px var(--black);
-  padding: .5rem ;
+  border: solid 2px var(--main);
+  padding: 0.5rem;
+  border-radius: 5px;
   span {
-    color: var(--white);
+    color: var(--black);
   }
- 
 `
-const StyledButton = ({
-  text,
-  external,
-  internal,
-  download,
-  href,
-  to,
-  ...props
-}) => {
+const StyledButton = ({ text, external, internal, href, to, ...props }) => {
   if (external) {
     return (
       <ButtonStyles>
@@ -43,15 +32,6 @@ const StyledButton = ({
         <Link to={to}>
           <span>{text}</span>
         </Link>
-      </ButtonStyles>
-    )
-  }
-  if (download) {
-    return (
-      <ButtonStyles>
-        <a href={to} download>
-          <span>{text}</span>
-        </a>
       </ButtonStyles>
     )
   }

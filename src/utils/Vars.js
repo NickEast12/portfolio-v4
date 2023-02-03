@@ -3,11 +3,11 @@ import { css } from 'styled-components'
 const Vars = css`
   :root {
     //* Colours Main
-    --main: #30e87a;
+    --main: #10e5c0;
     --secondary: #008897;
     --alt: #ff575f;
-    --background: #363d47;
-    --grey: #F7F7F7;
+    --background: #19303e;
+    --grey: #f7f7f7;
     --white: #ffffff;
     --black: #000000;
     //* Colours Secondary
@@ -34,7 +34,7 @@ const Vars = css`
     --dark: #343a40;
 
     //* Fonts
-    --fontMain: 'Gotham', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    --fontMain: 'roc-grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
       'Segoe UI Emoji', 'Segoe UI Symbol';
 
@@ -47,3 +47,7 @@ const Vars = css`
   }
 `
 export default Vars
+
+/* --main: #30e87a; */
+// --background: #363d47;
+// --main: #37c1b9;

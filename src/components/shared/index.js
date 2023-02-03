@@ -1,2 +1,2 @@
 export { StyledButton } from './StyledButton'
-export { TextBlocks } from './TextBlocks'
+export { BackgroundAnimation } from './BackgroundAnimation'

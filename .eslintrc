@@ -1,0 +1,14 @@
+{
+    "extends": [ "wesbos" ],
+    "rules": {
+      "import/no-unresolved": "off",
+      "max-classes-per-file": "off",
+      "react/no-danger": "off",
+      "no-restricted-exports": "off",
+      "eslintreact/destructuring-assignment": "off",
+      "react/jsx-no-useless-fragment": "off"  ,
+      "react/display-name": "off",
+      "eslintno-multi-assign": "off"
+
+    }
+  } 

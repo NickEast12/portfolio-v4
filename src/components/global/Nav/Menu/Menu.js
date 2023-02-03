@@ -1,122 +1,137 @@
-import React, { useEffect, useRef } from 'react'
-import PropTypes from "prop-types"
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { gsap } from 'utils/gsap'
-import { media } from 'utils/media'
-import { PageNavigation } from 'components/shared/TextBlocks'
+import { media } from 'utils/Media'
 
 const MenuStyles = styled.nav`
-  width: 100%;
-  height: 100vh;
+  width: 70%;
+  height: 60vh;
+  max-width: 400px;
+  max-height: 500px;
   position: absolute;
-  inset: 0;
-  opacity: 0;
-  background: rgba(45, 55, 55, 0.85);
-  backdrop-filter: blur(24px);
+  top: 0;
+  left: 1rem;
+  /* background: rgba(45, 55, 55, 0.85); */
+  /* background: transparent; */
+  /* backdrop-filter: blur(24px); */
   visibility: hidden;
+  border-radius: 7.5px;
   section {
-    width: 90%;
+    position: relative;
+    z-index: 99;
+    width: 80%;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin: var(--auto);
+    justify-content: flex-start;
     ul {
       list-style: none;
       display: flex;
       gap: 1rem;
       flex-direction: column;
-      align-items: flex-end;
+      overflow: hidden;
       li {
-        opacity: 0;
-        transform: translateX(100%);
+        overflow: hidden;
         font-weight: 800;
-        font-size: 1.35rem;
-        visibility: hidden;
-        button {
-          border: solid 2px var(--yellow);
-          border-radius: 0px !important;
-          padding: 0.5rem 1rem;
-          background: var(--yellow);
-          span {
-            font-family: var(--Gotham);
-            font-weight: 800;
-            font-size: 1.35rem;
-            text-transform: uppercase;
-            color: var(--darkGrey);
-          }
-        }
-        &:nth-child(1) {
-          &:hover,
-          &:active {
-            color: var(--yellow);
-          }
-        }
-        &:nth-child(2) {
-          &:hover,
-          &:active {
-            color: var(--blue);
-          }
-        }
-        &:nth-child(3) {
-          &:hover,
-          &:active {
-            color: var(--pink);
-          }
-        }
-        &:nth-child(4) {
-          &:hover,
-          &:active {
-            color: var(--teal);
-          }
+        font-size: 1.85rem;
+        color: black;
+        span {
+          display: block;
+          opacity: 0;
+          transform: translateY(100%);
+          visibility: hidden;
         }
       }
     }
   }
-  @media ${media.md} {
-    display: none;
+  .morph {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: white;
+    /* transition: clip-path 20ms ease-in-out; */
+    clip-path: circle(0px at 11.5% 4.5%);
+    /* clip-path: circle(25px at 40px 40px); */
+    border-radius: 7.5px;
+    /* visibility: hidden; */
   }
 `
 const Menu = ({ navOpen, setNavOpen, setOpen }) => {
-  const menuRef = useRef()
-  const q = gsap.utils.selector(menuRef)
+  const target = useRef()
+  const tl = useRef()
 
-  useEffect(() => {
-    menuRef.current = gsap
-      .timeline({ duration: 0.2, ease: 'power1.out', stagger: 0.2 })
-      .to(menuRef.current, { visibility: 'visible', opacity: 1 })
-      .to(q('ul li'), {
-        opacity: 1,
-        x: 0,
-        visibility: 'visible',
-        stagger: 0.15,
-      })
-
-    return () => {
-      menuRef.current?.kill()
-    }
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap
+        .timeline()
+        .to(target.current, {
+          visibility: 'visible',
+        })
+        .to('.morph', {
+          visibility: 'visible',
+          opacity: 1,
+          duration: 0.5,
+          clipPath: 'circle(100% at 10% 40%)',
+        })
+        .to('ul li span', {
+          opacity: 1,
+          y: 0,
+          visibility: 'visible',
+          stagger: {
+            // from: 'random',
+            // axis: 'null',
+            each: 0.15,
+          },
+        })
+    }, target)
   }, [])
+
   useEffect(() => {
+    //* Need to find a better way to handle tl speed and direction
     if (!navOpen) {
-      menuRef.current.reverse()
+      tl.current.timeScale(1.15)
+      tl.current.reverse()
     } else {
-      menuRef.current.play()
+      tl.current.timeScale(1)
+      tl.current.play()
     }
   }, [navOpen])
   return (
-    <MenuStyles ref={menuRef}>
+    <MenuStyles ref={target}>
       <section>
-        <PageNavigation setOpen={setOpen} />
+        <ul>
+          <li>
+            <a href="/">
+              <span>About me</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>Recent work</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>Articles</span>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <span>Get in touch</span>
+            </a>
+          </li>
+        </ul>
       </section>
+      <div className="morph" />
     </MenuStyles>
   )
-}
-
-Menu.propTypes = {
-  navOpen: PropTypes.bool,
-  setNavOpen: PropTypes.func,
-  setOpen: PropTypes.func,
 }
 
 export default Menu

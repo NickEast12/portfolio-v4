@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         margin: 0 auto;
         height: auto;
-        background: #000;
+        background: var(--background);
         font-family: var(--fontMain);
     }
    h1 {
@@ -102,4 +102,4 @@ const GlobalStyles = createGlobalStyle`
         color: var(--main);
     }
 `
-export default GlobalStyles 
+export default GlobalStyles

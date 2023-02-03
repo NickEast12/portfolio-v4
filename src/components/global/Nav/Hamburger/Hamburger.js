@@ -1,103 +1,68 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { gsap } from 'gsap'
 
-import { media } from 'utils/media'
-import { StaticImage } from 'gatsby-plugin-image'
-// import Logo from 'images/logos/logo.png'
+import { media } from 'utils/Media'
+
+import Logo from 'svgs/logo-flat.svg'
+import JustLogo from 'svgs/just-logo.svg'
 
 const HamburgerStyles = styled.button`
-  width: 30px;
-  margin: 0 0 0 auto;
   background-color: transparent !important;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 999;
   section {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    div {
-      transform-origin: 10.5px;
-      width: 100%;
-      height: 2px;
-      background: var(--black);
-      /* &:nth-child(2) {
-        width: 80%;
-        margin: 0 auto 0 0;
+    a {
+      display: flex;
+      background: var(--white);
+      border-radius: 50px;
+      padding: 7.5px;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 40px;
       }
-      &:nth-child(3) {
-        width: 50%;
-        margin: 0 auto 0 0;
-      } */
     }
-  }
-  @media ${media.md} {
-    display: none !important;
   }
 `
 const Hamburger = ({ navOpen, setnavOpen }) => {
-  const hamburger = useRef()
-  const q = gsap.utils.selector(hamburger)
-  const topBun = useRef()
-  const middleBun = useRef()
-  const bottomBun = useRef()
-  useEffect(() => {
-    topBun.current = gsap
-      .timeline({ duration: 0.2, ease: 'power1.out', stagger: 0.5 })
-      .to(q('.top'), {
-        translateY: 7,
-        rotate: 45,
-        // duration: 0.25,
+  const target = useRef()
+  const tl = useRef()
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap.timeline().to('.logo', {
+        rotate: '+720',
+        duration: 1,
       })
-    middleBun.current = gsap
-      .timeline({ duration: 0.2, ease: 'power1.out', stagger: 0.5 })
-      .to(q('.middle'), {
-        opacity: 0,
-        x: 150,
-        // duration: 0.25,
-      })
-    bottomBun.current = gsap
-      .timeline({ duration: 0.2, ease: 'power1.out', stagger: 0.5 })
-      .to(q('.bottom'), {
-        margin: 0,
-        translateY: -7,
-        rotate: -45,
-        // duration: 0.25,
-      })
-    return () => {
-      topBun.current.kill()
-      middleBun.current.kill()
-      bottomBun.current.kill()
-    }
+    }, target)
   }, [])
+
   useEffect(() => {
+    //* Need to find a better way to handle tl speed and direction
     if (!navOpen) {
-      topBun.current.reverse()
-      middleBun.current.reverse()
-      bottomBun.current.reverse()
+      tl.current.timeScale(1.15)
+      tl.current.reverse()
     } else {
-      topBun.current.play()
-      middleBun.current.play()
-      bottomBun.current.play()
+      tl.current.timeScale(1)
+      tl.current.play()
     }
   }, [navOpen])
-
   return (
     <HamburgerStyles
       tabIndex={0}
-      ref={hamburger}
       navOpen={navOpen}
       onClick={() => setnavOpen(!navOpen)}
       onKeyDown={() => setnavOpen(!navOpen)}
     >
-      <section>
-        <div className="top" />
-        <div className="middle" />
-        <div className="bottom" />
+      <section ref={target}>
+        <a>
+          <span className="sr-only">Open menu</span>
+          <JustLogo className="logo" />
+        </a>
       </section>
     </HamburgerStyles>
   )
