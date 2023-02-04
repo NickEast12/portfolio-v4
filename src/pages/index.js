@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Layout } from 'components/global'
-import { About, Hero, Projects } from 'components/blocks'
+import { About, Contact, Hero, Projects } from 'components/blocks'
 
 const IndexPage = () => {
   const [open, setOpen] = useState(false)
@@ -10,6 +10,7 @@ const IndexPage = () => {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </Layout>
   )
 }

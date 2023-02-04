@@ -1,68 +1,83 @@
 [
     {
-        "name": "Test Project 1",
+        "name": "Arnold Clark Cup",
         "tech" : [
-            "tech 1",
-            "tech 2",
-            "tech 3",
-            "tech 4",
-            "tech 5"
+            "JavaScript",
+            "React",
+            "Gatsby",
+            "Netlify"
+            
         ],
-        "dewynters": false
+        "dewynters": false,
+        "image": "../images/projects/acc-desktop.png",
+        "mobImage": "../images/projects/acc-mobile.png",
+        "area": "a"
     },
     {
-        "name": "Test Project 1",
+        "name": "Nutcracker",
         "tech" : [
-            "tech 1",
-            "tech 2",
-            "tech 3",
-            "tech 4",
-            "tech 5"
+            "JavaScript",
+            "React",
+            "Gatsby",
+            "Netlify"
         ],
-        "dewynters": false
+        "dewynters": false,
+        "image": "../images/projects/nut-desktop.png",
+        "mobImage": "../images/projects/nut-mobile.png",
+        "area": "b"
     },
     {
-        "name": "Test Project 1",
+        "name": "Dramabuds",
         "tech" : [
-            "tech 1",
-            "tech 2",
-            "tech 3",
-            "tech 4",
-            "tech 5"
+            "JavaScript",
+            "React",
+            "Gatsby",
+            "Netlify"
         ],
-        "dewynters": false
+        "dewynters": false,
+        "image": "../images/projects/db-desktop.png",
+        "mobImage": "../images/projects/dramabuds-mobile.png",
+        "area": "c"
     },
     {
-        "name": "Test Project 1",
+        "name": "RP International",
         "tech" : [
-            "tech 1",
-            "tech 2",
-            "tech 3",
-            "tech 4",
-            "tech 5"
+            "JavaScript",
+            "React",
+            "Gatsby",
+            "Netlify"
         ],
-        "dewynters": false
+        "dewynters": false,
+        "image": "../images/projects/rpi-desktop.png",
+        "mobImage": "../images/projects/rpint-mobile.png",
+        "area": "d"
     },
     {
-        "name": "Test Project 1",
+        "name": "The Mint Collective",
         "tech" : [
-            "tech 1",
-            "tech 2",
-            "tech 3",
-            "tech 4",
-            "tech 5"
+            "JavaScript",
+            "React",
+            "Gatsby",
+            "Tailwind",
+            "AWS"
         ],
-        "dewynters": false
+        "dewynters": true,
+        "image": "../images/projects/mint-desktop.png",
+        "mobImage": "../images/projects/mint-mobile.png",
+        "area": "e"
     },
     {
-        "name": "Test Project 1",
+        "name": "The Bodyguard",
         "tech" : [
-            "tech 1",
-            "tech 2",
-            "tech 3",
-            "tech 4",
-            "tech 5"
+            "JavaScript",
+            "React",
+            "Gatsby",
+            "AWS"
         ],
-        "dewynters": false
+        "dewynters": true,
+        "image": "../images/projects/bg-desktop.png",
+        "mobImage": "../images/projects/bodyguard-mob.png",
+        "area": "f"
     }
+    
 ]
