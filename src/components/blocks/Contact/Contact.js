@@ -147,10 +147,10 @@ const Contact = () => {
           'content-type': `application/json`,
         },
       })
-        .then(res => res.json())
-        .then(body => {
-          console.log(`response from API:`, body)
-        })
+      // .then(res => res.json())
+      // .then(body => {
+      //   console.log(`response from API:`, body)
+      // })
     }
   }
 
