@@ -1,4 +1,4 @@
-const sendgrid = require('@sendgrid/mail')
+const sendgrid = require('@sendgrid/mail').default
 // Your API Key from Sendgrid
 
 sendgrid.setApiKey(process.env.SENDGRID_KEY)
