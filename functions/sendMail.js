@@ -1,7 +1,7 @@
 const sendgrid = require('@sendgrid/mail')
 // Your API Key from Sendgrid
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+sendgrid.setApiKey(process.env.SENDGRID_KEY)
 
 const message = {
   // Your authorized email from SendGrid
