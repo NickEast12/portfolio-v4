@@ -22,9 +22,10 @@ const SingleProjectsStyles = styled.div`
     width: 100%;
     height: 100%;
     background-color: var(--background);
-    opacity: 0.45;
     content: '';
     z-index: 0;
+    opacity: 0;
+    transition: var(--transition);
   }
   .image {
     width: 100%;
@@ -69,6 +70,7 @@ const SingleProjectsStyles = styled.div`
     color: var(--white);
     transition: var(--transition);
     h4 {
+      opacity: 0;
       transform: translateY(25px);
       transition: var(--transition);
     }
@@ -128,12 +130,16 @@ const SingleProjectsStyles = styled.div`
   }
   &:hover,
   &:active {
+    &:after {
+      opacity: 0.45;
+    }
     .icon {
       opacity: 1;
       top: 1rem;
     }
     h4 {
       transform: translateY(0);
+      opacity: 1;
     }
     ul {
       opacity: 1;

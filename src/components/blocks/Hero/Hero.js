@@ -83,9 +83,7 @@ export default function Hero() {
           <StyledButton text="Test" />
         </div>
       </div>
-      <div className="canvas">
-        <BackgroundAnimation />
-      </div>
+      <div className="canvas">{/* <BackgroundAnimation /> */}</div>
     </HeroStyles>
   )
 }
