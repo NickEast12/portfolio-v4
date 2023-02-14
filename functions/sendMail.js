@@ -8,7 +8,7 @@ const message = {
   from: process.env.SENDGRID_AUTHORIZED_EMAIL,
 }
 
-const handler = (req, res) => {
+exports.handler = async (req, res) => {
   try {
     if (req.method !== 'POST') {
       res.json({ message: 'Try a POST!' })
@@ -48,5 +48,3 @@ const handler = (req, res) => {
     return res.status(500).json({ message: 'There was an error', error: err })
   }
 }
-
-module.exports = handler
