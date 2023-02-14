@@ -20,8 +20,15 @@ const handler = (req, res) => {
       message.text = req.body.text
       message.html = req.body.text
     }
+    const msg = {
+      to: 'test@example.com', // Change to your recipient
+      from: 'test@example.com', // Change to your verified sender
+      subject: 'Sending with SendGrid is Fun',
+      text: 'and easy to do anywhere, even with Node.js',
+      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    }
 
-    return sendgrid.send(message).then(
+    return sendgrid.send(msg).then(
       () => {
         res.status(200).json({
           message: 'I will send email',
