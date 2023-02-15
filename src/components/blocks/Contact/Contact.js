@@ -140,7 +140,7 @@ const Contact = () => {
       )
     } else {
       console.log(data)
-      fetch(`/.netlify/functions/sendMail`, {
+      fetch(`/api/send-mail`, {
         method: `POST`,
         body: JSON.stringify(data),
         headers: {
