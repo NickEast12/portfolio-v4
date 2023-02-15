@@ -33,3 +33,8 @@ Kick off your project with this default boilerplate. This starter ships with the
 1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
+
+[[redirects]]
+from = "/api/\*"
+to = "./netlify/functions/:splat"
+status = 200
