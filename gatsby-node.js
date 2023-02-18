@@ -9,18 +9,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-//* Creating pages via DSG -Deferred Static Generation
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: '/using-dsg',
-    component: require.resolve('./src/templates/using-dsg.js'),
-    context: {},
-    defer: true,
-  })
-}
-
-
 // async function createLegalPages({ graphql, actions }) {
 //   const legalTemplate = path.resolve('./src/templates/legalTemplate.js')
 //   const { data } = await graphql(`

@@ -14,6 +14,16 @@ const Animations = css`
       opacity: 1;
     }
   }
+  @keyframes scale-rotate {
+    0% {
+      transform: rotate(0);
+      transform: scale(1);
+    }
+    100% {
+      transform: rotate(25deg);
+      transform: scale(1.1);
+    }
+  }
 `
 
 export default Animations

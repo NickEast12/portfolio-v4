@@ -1,10 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
+import { navigate } from 'gatsby'
 
 import { MaxWidth } from 'components/global'
 
 import ErrorIcon from 'svgs/error.svg'
+import { media } from 'utils/Media'
+import Anchor from 'components/functional/anchor'
+
+import { gsap } from 'utils/gsap'
 
 const ContactStyles = styled.section`
   width: 100%;
@@ -19,6 +24,10 @@ const ContactStyles = styled.section`
       margin-bottom: 1rem;
       font-size: 2rem;
       text-decoration: underline var(--main);
+      @media ${media.md} {
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+      }
     }
     form {
       margin-top: 3rem;
@@ -113,18 +122,37 @@ const ContactStyles = styled.section`
           background-color: var(--main);
           padding: 1.25rem 0;
           border: none;
-
+          border: solid 2px var(--main);
+          transition: var(--transition);
+          cursor: pointer;
           span {
             font-weight: 700;
             font-size: 1.5rem;
+            transition: var(--transition);
+          }
+          &:hover,
+          &:active {
+            background: none;
+            border-radius: 7.5px;
+            span {
+              color: var(--white);
+            }
           }
         }
       }
     }
   }
+  @media ${media.md} {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  @media ${media.xl} {
+    max-width: 900px;
+  }
 `
 
 const Contact = () => {
+  const [success, setSuccess] = useState(false)
   const {
     register,
     formState: { errors },
@@ -141,24 +169,64 @@ const Contact = () => {
     } else {
       console.log(data)
       fetch(`/.netlify/functions/send-mail`, {
+        // fetch(`http://localhost:8888/.netlify/functions/send-mail`, {
         method: `POST`,
         body: JSON.stringify(data),
         headers: {
           'content-type': `application/json`,
         },
       })
-      // .then(res => res.json())
-      // .then(body => {
-      //   console.log(`response from API:`, body)
-      // })
+        .then(res => {
+          console.log(res)
+          if (res.status === 200) {
+            setSuccess(true)
+            navigate('/thank-you', {
+              state: {
+                name: data.name,
+              },
+            })
+          }
+        })
+        .then(body => {
+          console.log(body)
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 
+  const el = useRef()
+  const tl = useRef()
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: el.current,
+            // start: 'top top',
+            start: '-200',
+            markers: false,
+            toggleActions: 'play none none none',
+          },
+        })
+        .to('.fade-up', {
+          opacity: 1,
+          y: 0,
+          stagger: {
+            each: 0.25,
+          },
+        })
+    }, el)
+  }, [])
+
   return (
-    <ContactStyles>
+    <ContactStyles ref={el}>
+      <Anchor id="get-in-touch" />
       <MaxWidth maxWidth="900">
         <div className="contact">
-          <h3>Let’s talk about your project!</h3>
+          {/* <h3>Let’s talk about your project!</h3> */}
+          <h3 className="fade-up">Get in touch</h3>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <input
               type="text"
@@ -171,7 +239,7 @@ const Contact = () => {
               {...register('itsatrap')}
             />
 
-            <div>
+            <div className="fade-up">
               <p>Your Name</p>
               <div
                 className={
@@ -191,7 +259,7 @@ const Contact = () => {
                 <ErrorIcon />
               </div>
             </div>
-            <div>
+            <div className="fade-up">
               <p>Your Email</p>
               <div
                 className={
@@ -216,7 +284,7 @@ const Contact = () => {
                 <ErrorIcon />
               </div>
             </div>
-            <div>
+            <div className="fade-up">
               <p>Your Company</p>
               <input
                 type="text"
@@ -226,7 +294,7 @@ const Contact = () => {
                 {...register('company')}
               />
             </div>
-            <div>
+            <div className="fade-up">
               <p>About your project</p>
               <div
                 className={
@@ -244,7 +312,7 @@ const Contact = () => {
                 <ErrorIcon />
               </div>
             </div>
-            <div className="button">
+            <div className="button fade-up">
               <button type="submit">
                 <span>SUBMIT</span>
               </button>

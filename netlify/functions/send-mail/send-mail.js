@@ -2,37 +2,26 @@ const sendGridMail = require('@sendgrid/mail')
 
 const handler = async event => {
   try {
-    const { name, email, message } = JSON.parse(event.body).payload.data
-
-    console.log(`name: ${name}, email: ${email}, message: ${message}`)
-
-    sendGridMail.setApiKey(process.env.SENDGRID_API_KEY)
-    // const html = `
-    //   <div>
-    //      Hi ${name}! <br><br>
-    //      Thanks for getting in touch.
-    //      We have received your message
-    //      and one of our customer care
-    //      representatives will get in
-    //      touch shortly
-    //      <br><br>
-    //      Best <br>
-    //      John Doe
-    //   </div>
-    // `
-    // const mail = {
-    //   from: process.env.SENDER_EMAIL,
-    //   to: email,
-    //   subject: 'We have received your message',
-    //   html,
-    // }
-    // await sendGridMail.send(mail)
+    const data = JSON.parse(event.body)
+    const { name, email, company, message } = data
+    sendGridMail.setApiKey(process.env.SENDGRID_KEY)
+    const html = `
+      <div>
+         <h4>A message from ${name}</h4>
+         <p><strong>Company:</strong> ${company}</p>
+         <p><strong>Email:</strong> ${email}</p>
+         <br />
+         <div>
+          <p>${message}</p>
+         </div>
+      </div>
+    `
     const msg = {
-      to: 'test@example.com', // Change to your recipient
+      to: `${process.env.SENDGRID_AUTHORIZED_EMAIL}`, // Change to your recipient
       from: `${process.env.SENDGRID_AUTHORIZED_EMAIL}`,
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      subject: 'A new email from your website 🚀',
+      text: `A new message from ${name}`,
+      html,
     }
     sendGridMail
       .send(msg)

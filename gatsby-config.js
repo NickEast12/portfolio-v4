@@ -9,10 +9,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Dewynters Starter`,
-    description: `Dewynters`,
-    author: `Dewynters`,
-    siteName: `Dewynters`,
+    title: `Nick East Web Developer`,
+    description: `I’m a Front-end Developer & UI/UX designer based in London, UK. Currently, designing and building exceptional digital experiences for the West End at Dewynters.`,
+    author: `Nick East`,
+    siteName: `Nick East Web Developer`,
     siteUrl: process.env.GATSBY_FRONTEND_URL,
   },
   plugins: [

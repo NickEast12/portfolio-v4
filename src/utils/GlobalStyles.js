@@ -82,6 +82,29 @@ const GlobalStyles = createGlobalStyle`
             font-size: ${props => props.theme.font.p.xl.size};
         }
     }
+    .fade-up {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    .fade-down {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    .btn {
+      width: 200px;
+      height: 50px;
+      border-radius: var(--borderRadius);
+      border: none;
+      background: var(--main);
+      cursor: pointer;
+      span {
+        color: var(--black);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
     a, a:focus {
         color: inherit;
         text-decoration: none;

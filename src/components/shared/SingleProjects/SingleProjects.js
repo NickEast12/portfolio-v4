@@ -1,9 +1,11 @@
 import GetImage from 'components/functional/getImage'
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import styled, { css } from 'styled-components'
 
 import LinkIcon from 'svgs/link.svg'
 import { media } from 'utils/Media'
+
+import { gsap } from 'utils/gsap'
 
 const SingleProjectsStyles = styled.div`
   width: 100%;
@@ -13,6 +15,7 @@ const SingleProjectsStyles = styled.div`
   /* height: 250px; */
   position: relative;
   overflow: hidden;
+  background-color: var(--background);
   @media ${media.md} {
     grid-area: ${props => props.area};
   }
@@ -35,8 +38,9 @@ const SingleProjectsStyles = styled.div`
       height: 100%;
       border-radius: 7.5px;
       /* height: 300px; */
-
+      transition: all 0.25s ease-in-out;
       .gatsby-image-wrapper {
+        transition: all 0.25s ease-in-out !important;
         width: 100%;
         /* height: 100%; */
         border-radius: 7.5px;
@@ -47,7 +51,7 @@ const SingleProjectsStyles = styled.div`
     }
     .desktop {
       display: none;
-
+      transition: all 0.25s ease-in-out !important;
       @media ${media.md} {
         display: block;
         width: 100%;
@@ -57,6 +61,7 @@ const SingleProjectsStyles = styled.div`
           width: 100%;
           height: 100%;
           border-radius: 7.5px;
+          transition: all 0.25s ease-in-out !important;
         }
       }
     }
@@ -130,6 +135,12 @@ const SingleProjectsStyles = styled.div`
   }
   &:hover,
   &:active {
+    .gatsby-image-wrapper {
+      /* animation: scale-rotate 0.25s ease-in-out;
+      animation-fill-mode: both; */
+      transform: scale(1.1);
+      /* transform: rotate(10deg) scale(1.25); */
+    }
     &:after {
       opacity: 0.45;
     }
@@ -152,10 +163,9 @@ const SingleProjectsStyles = styled.div`
   }
 `
 const SingleProjects = ({ data }) => {
-  console.log(data)
-  const { name, tech, dewynters, image, mobImage, area } = data
+  const { name, tech, dewynters, image, mobImage, area, link } = data
   return (
-    <SingleProjectsStyles area={area}>
+    <SingleProjectsStyles area={area} className="fade-up">
       <div className="image">
         <div className="mobile">
           {mobImage && <GetImage data={mobImage} alt="" />}
@@ -176,7 +186,9 @@ const SingleProjects = ({ data }) => {
         </ul>
       </div>
       <div className="icon">
-        <LinkIcon />
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <LinkIcon />
+        </a>
       </div>
       {dewynters && (
         <div className="dewynters">

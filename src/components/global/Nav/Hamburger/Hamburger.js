@@ -13,7 +13,7 @@ const HamburgerStyles = styled.button`
   border: none;
   cursor: pointer;
   position: relative;
-  z-index: 999;
+  z-index: 9999999;
   section {
     a {
       display: flex;
@@ -28,7 +28,7 @@ const HamburgerStyles = styled.button`
     }
   }
 `
-const Hamburger = ({ navOpen, setnavOpen }) => {
+const Hamburger = ({ navOpen, setNavOpen }) => {
   const target = useRef()
   const tl = useRef()
 
@@ -55,8 +55,8 @@ const Hamburger = ({ navOpen, setnavOpen }) => {
     <HamburgerStyles
       tabIndex={0}
       navOpen={navOpen}
-      onClick={() => setnavOpen(!navOpen)}
-      onKeyDown={() => setnavOpen(!navOpen)}
+      onClick={() => setNavOpen(!navOpen)}
+      onKeyDown={() => setNavOpen(!navOpen)}
     >
       <section ref={target}>
         <a>

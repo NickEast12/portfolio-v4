@@ -6,20 +6,45 @@ import styled from 'styled-components'
 import { media } from 'utils/Media'
 
 const ButtonStyles = styled.button`
-  width: 200px;
+  border-radius: var(--borderRadius);
+  border: none;
   background: var(--main);
-  border-radius: 0;
+  cursor: pointer;
+  padding: 0.85rem 2rem;
+  transition: var(--transition);
   border: solid 2px var(--main);
-  padding: 0.5rem;
-  border-radius: 5px;
   span {
     color: var(--black);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+  }
+  &:hover,
+  &:active {
+    background: none;
+    border-radius: 50px;
+    span {
+      color: var(--white);
+    }
+    /* background: #098973;
+    span {
+      color: var(--white);
+    } */
   }
 `
-const StyledButton = ({ text, external, internal, href, to, ...props }) => {
+const StyledButton = ({
+  className,
+  text,
+  external,
+  internal,
+  href,
+  to,
+  ...props
+}) => {
   if (external) {
     return (
-      <ButtonStyles>
+      <ButtonStyles className={className}>
         <a href={href} target="_blank" rel="noreferrer">
           <span>{text}</span>
         </a>
@@ -28,7 +53,7 @@ const StyledButton = ({ text, external, internal, href, to, ...props }) => {
   }
   if (internal) {
     return (
-      <ButtonStyles>
+      <ButtonStyles className={className}>
         <Link to={to}>
           <span>{text}</span>
         </Link>
@@ -36,7 +61,7 @@ const StyledButton = ({ text, external, internal, href, to, ...props }) => {
     )
   }
   return (
-    <ButtonStyles>
+    <ButtonStyles className={className}>
       <a {...props}>
         <span>{text}</span>
       </a>

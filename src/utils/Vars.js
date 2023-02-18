@@ -6,7 +6,7 @@ const Vars = css`
     --main: #10e5c0;
     --secondary: #008897;
     --alt: #ff575f;
-    --background: #19303e;
+    --background: #12232f;
     --grey: #f7f7f7;
     --white: #ffffff;
     --black: #000000;
@@ -44,6 +44,9 @@ const Vars = css`
 
     //* Transition
     --transition: all 0.25s ease-in-out;
+
+    //* Border radius
+    --borderRadius: 7.5px;
   }
 `
 export default Vars
@@ -51,3 +54,4 @@ export default Vars
 /* --main: #30e87a; */
 // --background: #363d47;
 // --main: #37c1b9;
+/* --background: #19303e; */
