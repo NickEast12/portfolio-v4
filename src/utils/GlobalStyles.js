@@ -24,10 +24,14 @@ const GlobalStyles = createGlobalStyle`
         line-height: ${props => props.theme.font.lineHeight.base};
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
+        overflow-y: scroll;
         margin: 0 auto;
         height: auto;
         background: var(--background);
         font-family: var(--fontMain);
+    }
+    main {
+        overflow-y: scroll;
     }
    h1 {
         font-size: ${props => props.theme.font.h1.size};
