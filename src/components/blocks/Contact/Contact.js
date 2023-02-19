@@ -225,8 +225,8 @@ const Contact = () => {
       <Anchor id="get-in-touch" />
       <MaxWidth maxWidth="900">
         <div className="contact">
-          {/* <h3>Let’s talk about your project!</h3> */}
-          <h3 className="fade-up">Get in touch</h3>
+          {/* <h3 className="fade-up">Send me a message!</h3> */}
+          <h3 className="fade-up">What's on your mind?</h3>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <input
               type="text"

@@ -112,7 +112,10 @@ const Projects = () => {
       <Anchor id="recent-work" />
       <MaxWidth>
         <div className="projects">
-          <h3>Some things I’ve built</h3>
+          {/* <h3>Some things I have built</h3>
+          <h3>Some things I’ve built</h3> */}
+          {/* <h3>My recent work</h3> */}
+          <h3>My recent projects</h3>
           <div className="wrapper">
             {data.map((projects, i) => (
               <SingleProjects data={projects} key={i} />

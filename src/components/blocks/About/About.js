@@ -140,7 +140,7 @@ const About = () => {
             trigger: el.current,
             // start: '-400px top',
             start: '-200',
-            markers: true,
+            markers: false,
             toggleActions: 'play none none none',
           },
         })

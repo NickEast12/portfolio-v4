@@ -121,7 +121,7 @@ export default function Hero() {
       <div className="hero">
         <div className="copy" ref={el}>
           <p className="fade-up">
-            <strong>Hi, I'm Nick</strong>
+            <strong>Hi 👋, I'm Nick</strong>
           </p>
           <h1 className="fade-up">
             I build <span>Websites</span> and other cool things for the web!

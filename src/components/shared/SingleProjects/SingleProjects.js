@@ -187,6 +187,7 @@ const SingleProjects = ({ data }) => {
       </div>
       <div className="icon">
         <a href={link} target="_blank" rel="noopener noreferrer">
+          <p className="sr-only">{name}</p>
           <LinkIcon />
         </a>
       </div>
