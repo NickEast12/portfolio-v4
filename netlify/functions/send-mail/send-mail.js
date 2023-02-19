@@ -23,7 +23,7 @@ const handler = async event => {
       text: `A new message from ${name}`,
       html,
     }
-    sendGridMail
+    await sendGridMail
       .send(msg)
       .then(() => {
         console.log('Email sent')
