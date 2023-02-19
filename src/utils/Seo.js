@@ -17,7 +17,7 @@ export default function Seo({ title, description, schemaMarkup, img }) {
     }
   `)
   const settings = site.siteMetadata
-  const shareImage = 'Dewynters-Share.jpg'
+  const shareImage = 'share-image.png'
   return (
     <Helmet>
       <html lang="en" />
