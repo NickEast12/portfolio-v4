@@ -84,6 +84,9 @@ const HeroStyles = styled.section`
     }
   }
   .canvas {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
     &::after {
       position: absolute;
       width: 100%;
@@ -146,11 +149,11 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      {/* <div className="canvas">
+      <div className="canvas">
         <Suspense fallback={<div>Loading...</div>}>
           <BackgroundAnimation />
         </Suspense>
-      </div> */}
+      </div>
     </HeroStyles>
   )
 }
