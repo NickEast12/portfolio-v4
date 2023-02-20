@@ -7,7 +7,7 @@ const IndexPage = () => {
   const [open, setOpen] = useState(false)
   return (
     <Layout>
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <Projects />
       <Contact />
