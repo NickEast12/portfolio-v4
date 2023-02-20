@@ -50,7 +50,7 @@ const Layout = ({ children, title, description }) => {
       <Seo schemaMarkup={schema} title={title} description={description} />
       <>
         <GlobalStyles />
-        <Nav />
+        {/* <Nav /> */}
         <main>{children}</main>
       </>
     </ThemeProvider>
