@@ -12,8 +12,8 @@ import { gsap } from 'utils/gsap'
 const StyledProject = styled.section`
   width: 100%;
   .projects {
-    opacity: 0;
-    transform: translateY(100px);
+    /* opacity: 0;
+    transform: translateY(100px); */
     min-height: 100vh;
     padding: 3rem 0;
     max-width: 900px;
@@ -80,35 +80,36 @@ const Projects = () => {
   `)
   const data = projects.nodes
 
-  const el = useRef()
-  const tl = useRef()
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      tl.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: el.current,
-            // start: 'top top',
-            start: '-200',
-            markers: false,
-            toggleActions: 'play none none none',
-          },
-        })
-        .to('.projects', {
-          opacity: 1,
-          y: 0,
-        })
-        .to('.fade-up', {
-          opacity: 1,
-          y: 0,
-          stagger: {
-            each: 0.25,
-          },
-        })
-    }, el)
-  }, [])
+  // const el = useRef()
+  // const tl = useRef()
+  // useLayoutEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     tl.current = gsap
+  //       .timeline({
+  //         scrollTrigger: {
+  //           trigger: el.current,
+  //           // start: 'top top',
+  //           start: '-200',
+  //           markers: false,
+  //           toggleActions: 'play none none none',
+  //         },
+  //       })
+  //       .to('.projects', {
+  //         opacity: 1,
+  //         y: 0,
+  //       })
+  //       .to('.fade-up', {
+  //         opacity: 1,
+  //         y: 0,
+  //         stagger: {
+  //           each: 0.25,
+  //         },
+  //       })
+  //   }, el)
+  // }, [])
   return (
-    <StyledProject ref={el}>
+    // <StyledProject ref={el}>
+    <StyledProject>
       <Anchor id="recent-work" />
       <MaxWidth>
         <div className="projects">
