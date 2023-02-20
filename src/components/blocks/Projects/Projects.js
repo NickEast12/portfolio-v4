@@ -11,7 +11,9 @@ import { gsap } from 'utils/gsap'
 
 const StyledProject = styled.section`
   width: 100%;
+  height: 100%;
   .projects {
+    height: 100%;
     /* opacity: 0;
     transform: translateY(100px); */
     /* min-height: 100vh; */
@@ -110,7 +112,7 @@ const Projects = () => {
   return (
     // <StyledProject ref={el}>
     <StyledProject>
-      <Anchor id="recent-work" />
+      {/* <Anchor id="recent-work" /> */}
       <MaxWidth>
         <div className="projects">
           {/* <h3>Some things I have built</h3>

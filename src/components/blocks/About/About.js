@@ -10,6 +10,7 @@ import { gsap } from 'utils/gsap'
 
 const AboutStyles = styled.section`
   width: 100%;
+  height: 100%;
   /* min-height: 100vh; */
   color: var(--white);
   display: flex;
@@ -18,6 +19,7 @@ const AboutStyles = styled.section`
   max-width: 1150px;
   margin: 0 auto;
   .about {
+    height: 100%;
     padding: 3rem 0;
     opacity: 0;
     transform: translateY(100px);
@@ -152,7 +154,7 @@ const About = () => {
   }, [])
   return (
     <>
-      <Anchor id="about-me" />
+      {/* <Anchor id="about-me" /> */}
       <AboutStyles ref={el}>
         {/* <MaxWidth maxWidth="1100"> */}
         <MaxWidth>

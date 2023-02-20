@@ -18,6 +18,7 @@ const ContactStyles = styled.section`
   align-items: center;
   justify-content: center;
   .contact {
+    height: 100%;
     h3 {
       color: var(--white);
       text-align: center;
@@ -225,7 +226,7 @@ const Contact = () => {
 
   return (
     <ContactStyles ref={el}>
-      <Anchor id="get-in-touch" />
+      {/* <Anchor id="get-in-touch" /> */}
       <MaxWidth maxWidth="900">
         <div className="contact">
           {/* <h3 className="fade-up">Send me a message!</h3> */}
