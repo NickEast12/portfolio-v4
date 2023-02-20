@@ -33,16 +33,11 @@ const ButtonStyles = styled.button`
     } */
   }
 `
-const StyledButton = ({
-  className,
-  text,
-  external,
-  internal,
-  href,
-  to,
-  ...props
-}) => {
-  if (external) {
+const StyledButton = props => {
+  console.log(props)
+  const { className, text } = props
+  if (props.external) {
+    const { href, ...props } = props
     return (
       <ButtonStyles className={className}>
         <a href={href} target="_blank" rel="noreferrer">
@@ -51,7 +46,8 @@ const StyledButton = ({
       </ButtonStyles>
     )
   }
-  if (internal) {
+  if (props.internal) {
+    const { to, ...props } = props
     return (
       <ButtonStyles className={className}>
         <Link to={to}>
@@ -60,6 +56,7 @@ const StyledButton = ({
       </ButtonStyles>
     )
   }
+
   return (
     <ButtonStyles className={className}>
       <a {...props}>

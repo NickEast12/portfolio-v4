@@ -24,6 +24,7 @@ const ContactStyles = styled.section`
       margin-bottom: 1rem;
       font-size: 2rem;
       text-decoration: underline var(--main);
+      -webkit-text-decoration: underline var(--main);
       @media ${media.md} {
         font-size: 3.5rem;
         margin-bottom: 4rem;
@@ -62,6 +63,7 @@ const ContactStyles = styled.section`
           font-size: 1.5rem;
           padding-bottom: 1rem;
           outline: none;
+          border-radius: 0 !important;
           &::placeholder {
             color: rgba(255, 255, 255, 0.5);
           }
@@ -129,6 +131,7 @@ const ContactStyles = styled.section`
             font-weight: 700;
             font-size: 1.5rem;
             transition: var(--transition);
+            color: var(--black);
           }
           &:hover,
           &:active {

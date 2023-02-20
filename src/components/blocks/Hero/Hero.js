@@ -140,9 +140,8 @@ export default function Hero() {
               </a>
               .
             </p>
-            <a href="/#get-in-touch">
-              <StyledButton text="Get in touch" />
-            </a>
+
+            <StyledButton text="Get in touch" href="/#get-in-touch" />
           </section>
         </div>
       </div>
