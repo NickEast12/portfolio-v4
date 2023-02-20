@@ -165,8 +165,7 @@ const SingleProjectsStyles = styled.div`
 const SingleProjects = ({ data }) => {
   const { name, tech, dewynters, image, mobImage, area, link } = data
   return (
-    // <SingleProjectsStyles area={area} className="fade-up">
-    <SingleProjectsStyles area={area}>
+    <SingleProjectsStyles area={area} className="fade-up">
       <div className="image">
         <div className="mobile">
           {mobImage && <GetImage data={mobImage} alt="" />}

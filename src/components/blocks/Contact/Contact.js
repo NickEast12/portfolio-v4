@@ -226,7 +226,7 @@ const Contact = () => {
 
   return (
     <ContactStyles ref={el}>
-      {/* <Anchor id="get-in-touch" /> */}
+      <Anchor id="get-in-touch" />
       <MaxWidth maxWidth="900">
         <div className="contact">
           {/* <h3 className="fade-up">Send me a message!</h3> */}

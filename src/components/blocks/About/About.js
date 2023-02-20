@@ -154,7 +154,7 @@ const About = () => {
   }, [])
   return (
     <>
-      {/* <Anchor id="about-me" /> */}
+      <Anchor id="about-me" />
       <AboutStyles ref={el}>
         {/* <MaxWidth maxWidth="1100"> */}
         <MaxWidth>
