@@ -9,7 +9,8 @@ const BackgroundAnimation = React.lazy(() => import('./backgroundAnimation'))
 
 const HeroStyles = styled.section`
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
   position: relative;
   /* max-height: 550px; */
   .hero {
