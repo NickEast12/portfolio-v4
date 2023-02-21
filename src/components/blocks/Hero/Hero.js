@@ -12,6 +12,7 @@ const HeroStyles = styled.section`
   /* height: 100vh; */
   height: 100%;
   position: relative;
+  overflow-x: none;
   /* max-height: 550px; */
   .hero {
     height: 100%;
@@ -87,6 +88,7 @@ const HeroStyles = styled.section`
     overflow-y: scroll;
     width: 100%;
     height: 100%;
+    pointer-events: none;
     &::after {
       position: absolute;
       width: 100%;
@@ -98,6 +100,7 @@ const HeroStyles = styled.section`
       backdrop-filter: blur(90px);
       z-index: 10;
       pointer-events: none;
+      overflow-x: none;
     }
   }
 `
