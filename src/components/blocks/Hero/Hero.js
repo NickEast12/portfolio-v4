@@ -152,11 +152,11 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      <div className="canvas">
+      {/* <div className="canvas">
         <Suspense fallback={<div>Loading...</div>}>
           <BackgroundAnimation />
         </Suspense>
-      </div>
+      </div> */}
     </HeroStyles>
   )
 }
