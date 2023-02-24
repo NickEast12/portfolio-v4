@@ -13,9 +13,9 @@ const AboutStyles = styled.section`
   height: 100%;
   /* min-height: 100vh; */
   color: var(--white);
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   max-width: 1150px;
   margin: 0 auto;
   max-height: 1100px;
