@@ -9,11 +9,11 @@ const BackgroundAnimation = React.lazy(() => import('./backgroundAnimation'))
 
 const HeroStyles = styled.section`
   width: 100%;
-  /* height: 100vh; */
-  height: 100%;
+  height: 100vh;
+  min-height: 100vh;
   position: relative;
   overflow-x: none;
-  /* max-height: 550px; */
+  max-height: 860px;
   .hero {
     height: 100%;
     width: 90%;
@@ -85,22 +85,26 @@ const HeroStyles = styled.section`
     }
   }
   .canvas {
-    overflow-y: scroll;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    &::after {
-      position: absolute;
+    display: none;
+    @media ${media.md} {
+      display: block;
+      overflow-y: scroll;
       width: 100%;
       height: 100%;
-      inset: 0;
-      content: '';
-      background: rgba(0, 0, 0, 0.25);
-      /* backdrop-filter: blur(90px) saturate(500%); */
-      backdrop-filter: blur(90px);
-      z-index: 10;
       pointer-events: none;
-      overflow-x: none;
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        content: '';
+        background: rgba(0, 0, 0, 0.25);
+        /* backdrop-filter: blur(90px) saturate(500%); */
+        backdrop-filter: blur(90px);
+        z-index: 10;
+        pointer-events: none;
+        overflow-x: none;
+      }
     }
   }
 `
@@ -152,11 +156,11 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      {/* <div className="canvas">
+      <div className="canvas">
         <Suspense fallback={<div>Loading...</div>}>
           <BackgroundAnimation />
         </Suspense>
-      </div> */}
+      </div>
     </HeroStyles>
   )
 }

@@ -16,7 +16,7 @@ const StyledProject = styled.section`
     height: 100%;
     opacity: 0;
     transform: translateY(100px);
-    /* min-height: 100vh; */
+    min-height: 100vh;
     padding: 3rem 0;
     max-width: 900px;
     margin: 0 auto;

@@ -11,13 +11,14 @@ import { gsap } from 'utils/gsap'
 const AboutStyles = styled.section`
   width: 100%;
   height: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1150px;
   margin: 0 auto;
+  max-height: 860px;
   .about {
     height: 100%;
     padding: 3rem 0;

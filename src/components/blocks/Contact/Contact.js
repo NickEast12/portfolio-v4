@@ -13,10 +13,11 @@ import { gsap } from 'utils/gsap'
 
 const ContactStyles = styled.section`
   width: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 860px;
   .contact {
     height: 100%;
     h3 {
