@@ -26,6 +26,7 @@ const StyledProject = styled.section`
       margin-bottom: 1rem;
       font-size: 2rem;
       text-decoration: underline var(--main);
+      -webkit-text-decoration: underline var(--main);
       @media ${media.md} {
         font-size: 3.5rem;
         margin-bottom: 2rem;

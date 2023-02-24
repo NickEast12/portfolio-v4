@@ -10,10 +10,9 @@ const BackgroundAnimation = React.lazy(() => import('./backgroundAnimation'))
 const HeroStyles = styled.section`
   width: 100%;
   height: 100vh;
-  min-height: 100vh;
   position: relative;
   overflow-x: none;
-  max-height: 860px;
+  /* max-height: 860px; */
   .hero {
     height: 100%;
     width: 90%;
@@ -38,6 +37,7 @@ const HeroStyles = styled.section`
         font-size: 3rem;
         span {
           text-decoration: underline var(--main);
+          -webkit-text-decoration: underline var(--main);
           display: inline-block;
         }
         @media ${media.xl} {

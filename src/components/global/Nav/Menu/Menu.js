@@ -8,7 +8,7 @@ const MenuStyles = styled.nav`
   width: 80%;
   height: 60vh;
   max-width: 300px;
-  max-height: 500px;
+  max-height: 380px;
   position: absolute;
   top: -2.5px;
   left: -2.5px;

@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 //* CSS
 import 'normalize.css'
-import 'utils/css/main.css'
 
 //* Local Imports
 import GlobalStyles from 'utils/GlobalStyles'

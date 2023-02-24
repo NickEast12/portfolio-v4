@@ -10,7 +10,7 @@ const ButtonStyles = styled.button`
   border: none;
   background: var(--main);
   cursor: pointer;
-  padding: 0.85rem 2rem;
+  padding: 0.75rem 1.25rem;
   transition: var(--transition);
   border: solid 2px var(--main);
   span {
@@ -19,6 +19,9 @@ const ButtonStyles = styled.button`
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
+  }
+  @media ${media.md} {
+    padding: 0.85rem 2rem;
   }
   &:hover,
   &:active {

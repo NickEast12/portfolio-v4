@@ -11,14 +11,14 @@ import { gsap } from 'utils/gsap'
 const AboutStyles = styled.section`
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1150px;
   margin: 0 auto;
-  max-height: 860px;
+  max-height: 1100px;
   .about {
     height: 100%;
     padding: 3rem 0;
@@ -29,6 +29,7 @@ const AboutStyles = styled.section`
         margin-bottom: 1rem;
         font-size: 2.8rem;
         text-decoration: underline var(--main);
+        -webkit-text-decoration: underline var(--main);
         @media ${media.md} {
           font-size: 3.5rem;
         }

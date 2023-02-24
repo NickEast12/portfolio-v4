@@ -17,7 +17,7 @@ const ContactStyles = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 860px;
+  max-height: 1100px;
   .contact {
     height: 100%;
     h3 {
