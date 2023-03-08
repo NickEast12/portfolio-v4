@@ -74,8 +74,11 @@ const AboutStyles = styled.section`
       width: 90%;
       max-width: 375px;
       margin: 1.5rem auto;
+      img {
+        border-radius: var(--borderRadius) !important;
+      }
       .gatsby-image-wrapper {
-        border-radius: var(--borderRadius);
+        border-radius: var(--borderRadius) !important;
       }
       .border {
         position: absolute;
