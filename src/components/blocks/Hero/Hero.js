@@ -1,5 +1,6 @@
 import React, { Suspense, useLayoutEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
+import { window } from 'browser-monads'
 
 import { StyledButton } from 'components/shared'
 import { media } from 'utils/Media'
