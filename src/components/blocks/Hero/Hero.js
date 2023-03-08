@@ -69,6 +69,7 @@ const HeroStyles = styled.section`
     }
   }
   @media ${media.md} {
+    max-height: 1080px;
     .hero {
       width: 85%;
     }
