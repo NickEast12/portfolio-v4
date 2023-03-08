@@ -7,8 +7,6 @@ const IndexPage = () => {
   const [open, setOpen] = useState(false)
   return (
     <Layout>
-      {/* <Hero /> */}
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
         laudantium sint illo possimus aliquam.
@@ -101,6 +99,7 @@ const IndexPage = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
         laudantium sint illo possimus aliquam.
       </p>
+      <Hero />
       <About />
       <Projects />
       <Contact />
