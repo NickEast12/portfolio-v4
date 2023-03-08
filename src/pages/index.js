@@ -12,7 +12,7 @@ const IndexPage = () => {
         voluptates error fuga laborum non ipsam rem maxime eveniet, tempore unde
         sunt recusandae deleniti voluptas aliquid.
       </p>
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <Projects />
       <Contact />
