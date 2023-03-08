@@ -85,29 +85,29 @@ const HeroStyles = styled.section`
     }
   }
   .canvas {
-    /* display: none; */
-    position: absolute;
-    inset: 0;
-    /* @media ${media.md} { */
-    display: block;
-    overflow-y: scroll;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    &::after {
+    display: none;
+    @media ${media.md} {
       position: absolute;
+      inset: 0;
+      display: block;
+      overflow-y: scroll;
       width: 100%;
       height: 100%;
-      inset: 0;
-      content: '';
-      background: rgba(0, 0, 0, 0.25);
-      /* backdrop-filter: blur(90px) saturate(500%); */
-      backdrop-filter: blur(90px);
-      z-index: 10;
       pointer-events: none;
-      overflow-x: none;
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        content: '';
+        background: rgba(0, 0, 0, 0.25);
+        /* backdrop-filter: blur(90px) saturate(500%); */
+        backdrop-filter: blur(90px);
+        z-index: 10;
+        pointer-events: none;
+        overflow-x: none;
+      }
     }
-    /* } */
   }
 `
 export default function Hero() {
@@ -158,11 +158,11 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      {/* <div className="canvas">
+      <div className="canvas">
         <Suspense fallback={<div>Loading...</div>}>
           <BackgroundAnimation />
         </Suspense>
-      </div> */}
+      </div>
     </HeroStyles>
   )
 }
