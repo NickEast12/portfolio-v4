@@ -11,6 +11,7 @@ const HeroStyles = styled.section`
   width: 100%;
   height: 100%;
   position: relative;
+  overflow-x: none;
   /* max-height: 860px; */
   .hero {
     height: 100%;
@@ -18,9 +19,9 @@ const HeroStyles = styled.section`
     max-width: 1200px;
     min-height: 700px;
     margin: 0 auto;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center;
     color: var(--white);
     .copy {
       max-width: 950px;
@@ -87,6 +88,7 @@ const HeroStyles = styled.section`
     display: none;
     @media ${media.md} {
       display: block;
+      overflow-y: scroll;
       width: 100%;
       height: 100%;
       pointer-events: none;
@@ -101,6 +103,7 @@ const HeroStyles = styled.section`
         backdrop-filter: blur(90px);
         z-index: 10;
         pointer-events: none;
+        overflow-x: none;
       }
     }
   }

@@ -7,10 +7,102 @@ const IndexPage = () => {
   const [open, setOpen] = useState(false)
   return (
     <Layout>
-      <Hero />
-      <About />
+      {/* <Hero /> */}
+      {/* <About />
       <Projects />
-      <Contact />
+      <Contact /> */}
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
+        laudantium sint illo possimus aliquam.
+      </p>
     </Layout>
   )
 }
