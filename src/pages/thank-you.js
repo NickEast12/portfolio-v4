@@ -72,7 +72,7 @@ const ThankYouPage = ({ location }) => {
         <div className="thankyou">
           {location?.state ? (
             <h1>
-              Hey, thanks <span>{name}</span> for your message!
+              Hey, thanks for your message <span>{name}</span>!
             </h1>
           ) : (
             <h1>
