@@ -8,8 +8,8 @@ const IndexPage = () => {
   return (
     <Layout>
       {/* <Hero /> */}
-      {/* <About />
-      <Projects /> */}
+      {/* <About /> */}
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
         laudantium sint illo possimus aliquam.
@@ -102,6 +102,7 @@ const IndexPage = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias
         laudantium sint illo possimus aliquam.
       </p>
+      <Projects />
       <Contact />
     </Layout>
   )
