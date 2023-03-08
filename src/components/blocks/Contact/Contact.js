@@ -231,7 +231,8 @@ const Contact = () => {
       <MaxWidth maxWidth="900">
         <div className="contact">
           {/* <h3 className="fade-up">Send me a message!</h3> */}
-          <h3 className="fade-up">What's on your mind?</h3>
+          {/* <h3 className="fade-up">What's on your mind?</h3> */}
+          <h3 className="fade-up">What do you want to say?</h3>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <input
               type="text"
