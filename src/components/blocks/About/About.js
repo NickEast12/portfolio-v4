@@ -204,7 +204,7 @@ const About = () => {
               </p>
               <ul>
                 <li>JavaScript (ES6+)</li>
-                <li>React</li>
+                <li>TypeScript</li>
                 <li>Next.js</li>
                 <li>Node.js</li>
                 <li>Astro</li>
