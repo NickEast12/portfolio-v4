@@ -46,7 +46,8 @@ var config = {
 	COLORFUL: true,
 	COLOR_UPDATE_SPEED: 10,
 	PAUSED: false,
-	BACK_COLOR: { r: 15, g: 15, b: 15 },
+	BACK_COLOR: { r: 0, g: 0, b: 0 },
+	// BACK_COLOR: { r: 31, g: 41, b: 51 },
 	TRANSPARENT: false,
 	BLOOM: false,
 	BLOOM_ITERATIONS: 8,
@@ -1150,19 +1151,19 @@ window.addEventListener('mouseup', function () {
 	updatePointerUpData(pointers[0]);
 });
 
-canvas.addEventListener('touchstart', function (e) {
-	e.preventDefault();
-	var touches = e.targetTouches;
-	console.log(touches)
-	while (touches.length >= pointers.length) {
-		pointers.push(new pointerPrototype());
-	}
-	for (var i = 0; i < touches.length; i++) {
-		var posX = scaleByPixelRatio(touches[i].pageX);
-		var posY = scaleByPixelRatio(touches[i].pageY);
-		updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY);
-	}
-});
+// canvas.addEventListener('touchstart', function (e) {
+// 	e.preventDefault();
+// 	var touches = e.targetTouches;
+// 	console.log(touches)
+// 	while (touches.length >= pointers.length) {
+// 		pointers.push(new pointerPrototype());
+// 	}
+// 	for (var i = 0; i < touches.length; i++) {
+// 		var posX = scaleByPixelRatio(touches[i].pageX);
+// 		var posY = scaleByPixelRatio(touches[i].pageY);
+// 		updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY);
+// 	}
+// });
 
 canvas.addEventListener(
 	'touchmove',

@@ -9,7 +9,9 @@ import Anchor from 'components/functional/anchor'
 import { gsap } from 'utils/gsap'
 
 const AboutStyles = styled.section`
-  pointer-events: none;
+  @media ${media.md} {
+    pointer-events: none;
+  }
   width: 100%;
   height: 100%;
   min-height: 100vh;

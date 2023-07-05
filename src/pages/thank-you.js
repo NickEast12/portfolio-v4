@@ -4,12 +4,15 @@ import { Link } from 'gatsby'
 
 import { Layout } from 'components/global'
 import { StyledButton } from 'components/shared'
+import { media } from 'utils/Media'
 
 const ThankYouPageStyles = styled.div`
   width: 100%;
   position: relative;
   z-index: 1;
-  pointer-events: none;
+  @media ${media.md} {
+    pointer-events: none;
+  }
   .thankyou {
     max-height: 100vh;
     height: 100vh;

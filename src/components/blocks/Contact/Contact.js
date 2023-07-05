@@ -12,7 +12,9 @@ import Anchor from 'components/functional/anchor'
 import { gsap } from 'utils/gsap'
 
 const ContactStyles = styled.section`
-  pointer-events: none;
+  @media ${media.md} {
+    pointer-events: none;
+  }
   width: 100%;
   min-height: 100vh;
   display: flex;
