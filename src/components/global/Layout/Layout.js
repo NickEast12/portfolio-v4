@@ -11,6 +11,9 @@ import theme from 'utils/Theme'
 import Seo from 'utils/Seo'
 import { Nav } from '../Nav'
 
+// import 'utils/dat.gui.min'
+// import 'utils/fluid-background'
+
 //* Smooth scroll on all links
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
@@ -50,7 +53,10 @@ const Layout = ({ children, title, description }) => {
       <>
         <GlobalStyles />
         <Nav />
-        <main>{children}</main>
+        <main>
+          {children}
+          <canvas id="fluid-background" />
+        </main>
       </>
     </ThemeProvider>
   )

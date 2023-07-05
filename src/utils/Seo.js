@@ -55,6 +55,9 @@ export default function Seo({ title, description, schemaMarkup, img }) {
           {JSON.stringify(schemaMarkup)}
         </script>
       )}
+      <script src="/fluid-background.js" />
+      <script src="/dat.gui.min.js" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js" />
     </Helmet>
   )
 }

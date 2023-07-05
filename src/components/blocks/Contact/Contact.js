@@ -12,12 +12,15 @@ import Anchor from 'components/functional/anchor'
 import { gsap } from 'utils/gsap'
 
 const ContactStyles = styled.section`
+  pointer-events: none;
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   max-height: 1100px;
+  position: relative;
+  z-index: 2;
   .contact {
     height: 100%;
     h3 {
@@ -57,6 +60,7 @@ const ContactStyles = styled.section`
         }
         input,
         textarea {
+          pointer-events: auto !important;
           background: none;
           width: 100%;
           border: none;
@@ -120,6 +124,7 @@ const ContactStyles = styled.section`
         max-width: 500px;
         margin: 0 auto;
         width: 100%;
+        pointer-events: auto !important;
         button {
           width: 100%;
           border-radius: 100px;

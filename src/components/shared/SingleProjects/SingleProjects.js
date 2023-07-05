@@ -8,6 +8,7 @@ import { media } from 'utils/Media'
 import { gsap } from 'utils/gsap'
 
 const SingleProjectsStyles = styled.div`
+  pointer-events: auto !important;
   width: 100%;
   cursor: pointer;
   background-color: #d9d9d9;

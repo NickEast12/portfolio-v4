@@ -10,8 +10,11 @@ import Anchor from 'components/functional/anchor'
 import { gsap } from 'utils/gsap'
 
 const StyledProject = styled.section`
+  pointer-events: none;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 2;
   .projects {
     height: 100%;
     opacity: 0;

@@ -9,6 +9,7 @@ import Anchor from 'components/functional/anchor'
 import { gsap } from 'utils/gsap'
 
 const AboutStyles = styled.section`
+  pointer-events: none;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -19,6 +20,8 @@ const AboutStyles = styled.section`
   max-width: 1150px;
   margin: 0 auto;
   max-height: 1100px;
+  position: relative;
+  z-index: 2;
   .about {
     height: 100%;
     padding: 3rem 0;
@@ -39,6 +42,7 @@ const AboutStyles = styled.section`
         a {
           color: var(--main);
           text-decoration: underline;
+          pointer-events: auto !important;
           &:hover,
           &:active {
             text-decoration: underline var(--white) 1px;

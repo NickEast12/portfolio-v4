@@ -1,12 +1,12 @@
-import React, { Suspense, useLayoutEffect, useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { window } from 'browser-monads'
+// import { window } from 'browser-monads'
 
 import { StyledButton } from 'components/shared'
 import { media } from 'utils/Media'
 import { gsap } from 'utils/gsap'
 
-const BackgroundAnimation = React.lazy(() => import('./backgroundAnimation'))
+// const BackgroundAnimation = React.lazy(() => import('./backgroundAnimation'))
 
 const HeroStyles = styled.section`
   width: 100%;
@@ -110,7 +110,7 @@ const HeroStyles = styled.section`
   }
 `
 export default function Hero() {
-  const [ready, setReady] = useState(false)
+  // const [ready, setReady] = useState(false)
 
   const el = useRef()
   const tl = useRef()
@@ -157,13 +157,13 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      {window.innerWidth > 768 && (
+      {/* {window.innerWidth > 768 && (
         <div className="canvas">
           <Suspense fallback={<div>Loading...</div>}>
             <BackgroundAnimation />
           </Suspense>
         </div>
-      )}
+      )} */}
     </HeroStyles>
   )
 }

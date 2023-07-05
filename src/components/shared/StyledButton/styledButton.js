@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { media } from 'utils/Media'
 
 const ButtonStyles = styled.button`
+  pointer-events: auto !important;
   border-radius: var(--borderRadius);
   border: none;
   background: var(--main);

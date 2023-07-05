@@ -7,6 +7,9 @@ import { StyledButton } from 'components/shared'
 
 const ThankYouPageStyles = styled.div`
   width: 100%;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
   .thankyou {
     max-height: 100vh;
     height: 100vh;

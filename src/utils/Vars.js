@@ -3,7 +3,8 @@ import { css } from 'styled-components'
 const Vars = css`
   :root {
     //* Colours Main
-    --main: #10e5c0;
+    --main: #fff;
+    --old: #10e5c0;
     --secondary: #008897;
     --alt: #ff575f;
     --background: #12232f;

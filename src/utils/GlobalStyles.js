@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         margin: 0 auto;
         height: auto;
-        background: var(--background);
+        /* background: var(--background); */
         font-family: var(--fontMain);
     }
    h1 {
@@ -123,6 +123,17 @@ const GlobalStyles = createGlobalStyle`
     ::selection {
         background: var(--black); /* WebKit/Blink Browsers */
         color: var(--main);
+    }
+    main {
+        position: relative;
+    }
+    #fluid-background {
+        position: fixed;
+        inset: 0;
+        /* z-index: -1; */
+        width: 100%;
+        height: 100vh;
+        content: '';
     }
 `
 export default GlobalStyles
